@@ -1,0 +1,28 @@
+{
+  "name": "watch",
+  "version": "0.0.1",
+  "description": "A small watch app in desktop",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuanhhaogk/Watch.git"
+  },
+  "keywords": [
+    "Watch",
+    "HTML5",
+    "CSS3",
+    "Javascript",
+    "NodeJS",
+    "ElectronJS",
+    "AngularJS"
+  ],
+  "author": "Vu Anh Hao <vuanhhaogk@gmail.com> (https://vuanhhaogk.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuanhhaogk/Watch/issues"
+  },
+  "homepage": "https://github.com/vuanhhaogk/Watch#readme"
+}
