@@ -1,0 +1,28 @@
+/*** TITLEBAR ***/
+
+#titlebar {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+
+#openmenu {
+    display: none;
+}
+
+#titlebar label[for="openmenu"], #titlebar .close {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#titlebar .title {
+    display: block;
+    width: calc(100% - 60px);
+    float: left;
+    line-height: 30px;
+    text-align: center;
+}

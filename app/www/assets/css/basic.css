@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 html, body {
@@ -12,10 +13,13 @@ html, body {
 body {
     font-family: 'RobotoCondensed', sans-serif;
     -webkit-app-region: drag;
+    background-color: #343434;
+    color: #ececec;
 }
 
 a, button, input {
     -webkit-app-region: no-drag;
+    color: #ececec;
 }
 
 button, input {
