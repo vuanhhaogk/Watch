@@ -31,7 +31,6 @@ function initBackground(){
 
     bg.position.set(CENTER_X, CENTER_Y);
     bg.lineStyle(2, 0xececec, 1);
-    bg.drawCircle(0, 0, RADIUS);
 
     drawAxe(bg, Math.PI/6, MAX_AXE_LEN);
     drawAxe(bg, Math.PI/30, MIN_AXE_LEN);
