@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/basic.css" type="text/css">
     <link rel="stylesheet" href="assets/css/titlebar.css" type="text/css">
     <link rel="stylesheet" href="assets/css/clock.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/calendar.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Watch</title>
@@ -40,7 +41,13 @@
     </script>
 
     <script type="text/ng-template" id="calendar.html">
-        Calendar
+        <div id="month-tool">
+            <button class="prev fa fa-angle-double-left" ng-click="gotoPrevMonth()"></button>
+            <label class="current" ng-bind="month_name"></label>
+            <div class="button next fa fa-angle-double-right" ng-click="gotoNextMonth()"></div>
+        </div>
+        <table id="month-view">
+        </table>
     </script>
 
     <script type="text/ng-template" id="alarm.html">
@@ -59,6 +66,7 @@
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/clockCtrl.js"></script>
+    <script src="assets/js/calendarCtrl.js"></script>
 
     <script src="assets/js/canvasclockServ.js"></script>
     <script src="assets/js/watchhandlerServ.js"></script>
