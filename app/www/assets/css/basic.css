@@ -12,8 +12,7 @@ html, body {
 
 body {
     font-family: 'RobotoCondensed', sans-serif;
-    -webkit-app-region: drag;
-    background-color: #343434;
+    background-color: #424242;
     color: #ececec;
 }
 

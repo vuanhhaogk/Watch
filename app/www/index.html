@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/fontface.css" type="text/css">
     <link rel="stylesheet" href="assets/css/basic.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/titlebar.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Watch</title>
@@ -15,8 +16,15 @@
 </head>
 <body>
     <div id="titlebar">
-        <input type="text" id="openmenu">
+        <input type="checkbox" id="openmenu">
         <label for="openmenu" class="fa fa-navicon"></label>
+        <nav>
+            <a href="#/clock" class="fa fa-clock-o">Clock</a>
+            <a href="#/calendar" class="fa fa-calendar">Calendar</a>
+            <a href="#/alarm" class="fa fa-bell-o">Alarm</a>
+            <a href="#/stopwatch" class="fa fa-star">Stopwatch</a>
+            <a href="#/countdown" class="fa fa-hourglass-2">Countdown</a>
+        </nav>
         <div class="title">Watch</div>
         <button class="close fa fa-close"></button>
     </div>
