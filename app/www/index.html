@@ -15,6 +15,8 @@
 
     <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/angular-route.min.js"></script>
+
+    <script src="assets/js/pixi.min.js"></script>
 </head>
 <body ng-app="mainApp">
     <div id="titlebar">
@@ -33,7 +35,7 @@
     <div id="main" ng-view></div>
 
     <script type="text/ng-template" id="clock.html">
-        Clock
+        <div id="clock-canvas"></div>
     </script>
 
     <script type="text/ng-template" id="calendar.html">
@@ -56,5 +58,7 @@
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/clockCtrl.js"></script>
+
+    <script src="assets/js/canvasclockServ.js"></script>
 </body>
 </html>
