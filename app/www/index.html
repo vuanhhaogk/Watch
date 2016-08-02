@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mainApp">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
@@ -16,17 +16,42 @@
 </head>
 <body>
     <div id="titlebar">
-        <input type="checkbox" id="openmenu">
-        <label for="openmenu" class="fa fa-navicon"></label>
-        <nav>
-            <a href="#/clock" class="fa fa-clock-o">Clock</a>
-            <a href="#/calendar" class="fa fa-calendar">Calendar</a>
-            <a href="#/alarm" class="fa fa-bell-o">Alarm</a>
-            <a href="#/stopwatch" class="fa fa-star">Stopwatch</a>
-            <a href="#/countdown" class="fa fa-hourglass-2">Countdown</a>
-        </nav>
         <div class="title">Watch</div>
         <button class="close fa fa-close"></button>
     </div>
+    <input type="checkbox" id="openmenu">
+    <label for="openmenu" class="fa fa-navicon"></label>
+    <nav id="menu">
+        <a href="#/clock" class="fa fa-clock-o">Clock</a>
+        <a href="#/calendar" class="fa fa-calendar">Calendar</a>
+        <a href="#/alarm" class="fa fa-bell-o">Alarm</a>
+        <a href="#/stopwatch" class="fa fa-star">Stopwatch</a>
+        <a href="#/countdown" class="fa fa-hourglass-2">Countdown</a>
+    </nav>
+    <div id="main">
+        <div ng-view=""></div>
+
+        <script type="text/ng-template" id="clock.html">
+            Clock
+        </script>
+
+        <script type="text/ng-template" id="calendar.html">
+            Calendar
+        </script>
+
+        <script type="text/ng-template" id="alarm.html">
+            Alarm
+        </script>
+
+        <script type="text/ng-template" id="stopwatch.html">
+            Stopwatch
+        </script>
+
+        <script type="text/ng-template" id="countdown.html">
+            Countdown
+        </script>
+    </div>
+
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
