@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="mainApp">
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="assets/css/fontface.css" type="text/css">
     <link rel="stylesheet" href="assets/css/basic.css" type="text/css">
     <link rel="stylesheet" href="assets/css/titlebar.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/clock.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Watch</title>
 
     <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
 </head>
-<body>
+<body ng-app="mainApp">
     <div id="titlebar">
         <div class="title">Watch</div>
         <button class="close fa fa-close"></button>
@@ -28,30 +30,31 @@
         <a href="#/stopwatch" class="fa fa-star">Stopwatch</a>
         <a href="#/countdown" class="fa fa-hourglass-2">Countdown</a>
     </nav>
-    <div id="main">
-        <div ng-view=""></div>
+    <div id="main" ng-view></div>
 
-        <script type="text/ng-template" id="clock.html">
-            Clock
-        </script>
+    <script type="text/ng-template" id="clock.html">
+        Clock
+    </script>
 
-        <script type="text/ng-template" id="calendar.html">
-            Calendar
-        </script>
+    <script type="text/ng-template" id="calendar.html">
+        Calendar
+    </script>
 
-        <script type="text/ng-template" id="alarm.html">
-            Alarm
-        </script>
+    <script type="text/ng-template" id="alarm.html">
+        Alarm
+    </script>
 
-        <script type="text/ng-template" id="stopwatch.html">
-            Stopwatch
-        </script>
+    <script type="text/ng-template" id="stopwatch.html">
+        Stopwatch
+    </script>
 
-        <script type="text/ng-template" id="countdown.html">
-            Countdown
-        </script>
-    </div>
+    <script type="text/ng-template" id="countdown.html">
+        Countdown
+    </script>
+
+    <script src="assets/js/menu.js"></script>
 
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/clockCtrl.js"></script>
 </body>
 </html>
