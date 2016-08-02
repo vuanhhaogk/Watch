@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/vuanhhaogk/Watch/issues"
   },
-  "homepage": "https://github.com/vuanhhaogk/Watch#readme"
+  "homepage": "https://github.com/vuanhhaogk/Watch#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
 }
