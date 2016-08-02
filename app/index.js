@@ -4,10 +4,11 @@ let win
 
 function createWindow () {
     win = new BrowserWindow({
-        width: 360,
-        height: 480,
+        width: 240,
+        height: 240,
         frame: false,
-        titleBarStyle: 'hidden'
+        titleBarStyle: 'hidden',
+        resizable: false
     });
 
     win.loadURL(`file://${__dirname}/www/index.html`);
