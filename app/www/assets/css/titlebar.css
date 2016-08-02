@@ -29,7 +29,7 @@ label[for="openmenu"] {
     left: 0;
 }
 
-label[for="openmenu"]:hover, #titlebar .close:hover {
+#openmenu:checked~label, label[for="openmenu"]:hover, #titlebar .close:hover {
     background-color: #212121;
 }
 
@@ -91,4 +91,8 @@ label[for="openmenu"]:hover, #titlebar .close:hover {
 
 #openmenu:checked~#main {
     opacity: .3;
+}
+
+#openmenu:checked~label:before {
+    content: '\f060';
 }
