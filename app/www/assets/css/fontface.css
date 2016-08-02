@@ -2,3 +2,8 @@
     font-family: 'RobotoCondensed';
     src: url('../fonts/RobotoCondensed-Light.ttf');
 }
+
+@font-face {
+    font-family: 'Quartz';
+    src: url('../fonts/Quartz.ttf');
+}
