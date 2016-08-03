@@ -81,16 +81,31 @@ label[for="openmenu"] {
 #main {
     width: 100%;
     height: calc(100% - 30px);
-    transition: all .3s;
     position: relative;
+    overflow: hidden;
+}
+
+#menu_bg {
+    background-color: rgba(33, 33, 33, .3);
+    width: 100%;
+    height: calc(100% - 30px);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: none;
+    z-index: 9;
 }
 
 #openmenu:checked~#menu {
     left: 0px;
 }
 
+#openmenu:checked~#menu_bg {
+    display: block;
+}
+
 #openmenu:checked~#main {
-    opacity: .3;
+    -webkit-filter: blur(3px);
 }
 
 #openmenu:checked~label:before {
