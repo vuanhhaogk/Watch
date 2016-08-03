@@ -22,8 +22,6 @@ mainApp.controller('calendarCtrl', function($scope){
                 table += '</tr><tr>';
             }
 
-            console.log(day_pointer.toDateString(), current.toDateString());
-
             table += '<td' + (day_pointer.toDateString() == (new Date()).toDateString() ? ' class="now"' : "") + '>' + day_pointer.getDate() + '</td>';
             day_pointer.setDate(day_pointer.getDate() + 1);
         }
