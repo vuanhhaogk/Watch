@@ -31,7 +31,7 @@
         <a href="#/clock" class="fa fa-clock-o">Clock</a>
         <a href="#/calendar" class="fa fa-calendar">Calendar</a>
         <a href="#/alarm" class="fa fa-bell-o">Alarm</a>
-        <a href="#/stopwatch" class="fa fa-star">Stopwatch</a>
+        <a href="#/stopwatch" class="fa fa-bomb">Stopwatch</a>
         <a href="#/countdown" class="fa fa-hourglass-2">Countdown</a>
         <a href="#/setting" class="fa fa-gear">Setting</a>
     </nav>
@@ -61,7 +61,11 @@
     </script>
 
     <script type="text/ng-template" id="stopwatch.html">
-        Stopwatch
+        <div id="stopwatch">
+            <div class="time" id="show_time"></div>
+            <div class="tool"><button class="start fa fa-clock-o" ng-click="startTick()"></button><button ng-click="refresh()" class="reset fa fa-refresh"></button></div>
+            <div class="list"></div>
+        </div>
     </script>
 
     <script type="text/ng-template" id="countdown.html">
@@ -78,6 +82,7 @@
     <script src="assets/js/clockCtrl.js"></script>
     <script src="assets/js/calendarCtrl.js"></script>
     <script src="assets/js/alarmCtrl.js"></script>
+    <script src="assets/js/stopwatchCtrl.js"></script>
 
     <script src="assets/js/canvasclockServ.js"></script>
     <script src="assets/js/watchhandlerServ.js"></script>
