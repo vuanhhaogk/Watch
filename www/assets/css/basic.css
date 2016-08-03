@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     overflow: hidden;
     margin: 0;
+    -webkit-use-select: none;
 }
 
 body {
