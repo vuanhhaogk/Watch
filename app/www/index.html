@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/titlebar.css" type="text/css">
     <link rel="stylesheet" href="assets/css/clock.css" type="text/css">
     <link rel="stylesheet" href="assets/css/calendar.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/alarm.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Watch</title>
@@ -51,7 +52,11 @@
     </script>
 
     <script type="text/ng-template" id="alarm.html">
-        Alarm
+        <form novalidate id="alarm-form">
+            <input class="active" type="checkbox" ng-model="active" id="active-alarm">
+            <div class="time"><input class="hour" type="text" value="00" onclick="this.select()">:<input type="text" class="min" value="00" onclick="this.select()"></div>
+            <label for="active-alarm"></label>
+        </form>
     </script>
 
     <script type="text/ng-template" id="stopwatch.html">
@@ -67,8 +72,10 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/clockCtrl.js"></script>
     <script src="assets/js/calendarCtrl.js"></script>
+    <script src="assets/js/alarmCtrl.js"></script>
 
     <script src="assets/js/canvasclockServ.js"></script>
     <script src="assets/js/watchhandlerServ.js"></script>
+    <script src="assets/js/alarmServ.js"></script>
 </body>
 </html>

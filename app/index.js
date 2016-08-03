@@ -6,6 +6,8 @@ function createWindow () {
     win = new BrowserWindow({
         width: 240,
         height: 270,
+        x: 100,
+        y: 100,
         frame: false,
         titleBarStyle: 'hidden',
         resizable: false

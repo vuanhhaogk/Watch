@@ -12,6 +12,11 @@ var mainApp = angular.module('mainApp', ['ngRoute'])
         controller: 'calendarCtrl'
     }).
 
+    when ('/alarm', {
+        templateUrl: 'alarm.html',
+        controller: "alarmCtrl"
+    }).
+
     otherwise({
         redirectTo: '/clock'
     })
