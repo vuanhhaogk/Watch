@@ -3,19 +3,28 @@ var Alarm = (function(){
 var alarm = {
     on: false,
     hour: 0,
-    min: 0
+    min: 0,
+    sound: new Audio()
 };
+
+alarm.sound.src = 'assets/sound/alarm.wav';
+alarm.sound.loop = true;
 
 alarm.tick = function(){
     var d = new Date();
 
     if (this.hour === d.getHours() && this.min === d.getMinutes()){
-        console.log('Ring');
+        this.sound.play();
+    } else {
+        this.sound.pause();
     }
 
     setTimeout(function(){
         if (this.on)
             this.tick();
+        else {
+            this.sound.pause();
+        }
     }.bind(this), 1000);
 }
 
