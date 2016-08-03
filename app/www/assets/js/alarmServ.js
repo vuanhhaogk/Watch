@@ -1,7 +1,7 @@
 var Alarm = (function(){
 
 var alarm = {
-    on: 'false',
+    on: false,
     hour: 0,
     min: 0
 };
