@@ -43,7 +43,7 @@ mainApp.controller('calendarCtrl', function($scope){
     }
 
     $scope.gotoNextMonth = function(){
-        current.setMonth(current.getMonth() - 1);
+        current.setMonth(current.getMonth() + 1);
         $scope.updateMonth();
     }
 
