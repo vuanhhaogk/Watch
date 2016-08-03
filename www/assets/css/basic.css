@@ -27,3 +27,23 @@ button, input {
     padding: 0;
     background-color: transparent;
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color:
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #525252;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #212121;
+}

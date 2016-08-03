@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/clock.css" type="text/css">
     <link rel="stylesheet" href="assets/css/calendar.css" type="text/css">
     <link rel="stylesheet" href="assets/css/alarm.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/stopwatch.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Watch</title>
@@ -62,9 +63,11 @@
 
     <script type="text/ng-template" id="stopwatch.html">
         <div id="stopwatch">
-            <div class="time" id="show_time"></div>
+            <div class="time"></div>
             <div class="tool"><button class="start fa fa-clock-o" ng-click="startTick()"></button><button ng-click="refresh()" class="reset fa fa-refresh"></button></div>
-            <div class="list"></div>
+            <ol class="list">
+                <li ng-repeat="item in list">{{item}}</div>
+            </ol>
         </div>
     </script>
 
@@ -87,5 +90,6 @@
     <script src="assets/js/canvasclockServ.js"></script>
     <script src="assets/js/watchhandlerServ.js"></script>
     <script src="assets/js/alarmServ.js"></script>
+    <script src="assets/js/stopwatchServ.js"></script>
 </body>
 </html>
