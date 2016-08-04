@@ -4,21 +4,27 @@ mainApp.controller('stopwatchCtrl', function($scope, StopWatch){
 
     stime.innerHTML = StopWatch.toShowTime(stopwatch.getTime());
 
-    $scope.list = [];
+    $scope.stopwatch = stopwatch;
+
+    $scope.tick = function(time){
+        stime.innerHTML = StopWatch.toShowTime(time);
+    }
 
     $scope.startTick = function(){
         if (!stopwatch.is_start){
-            stopwatch.start(function(time){
-                stime.innerHTML = StopWatch.toShowTime(time);
-            });
+            stopwatch.start($scope.tick);
         } else {
-            $scope.list.push(StopWatch.toShowTime(stopwatch.getTime()));
+            stopwatch.list.push(StopWatch.toShowTime(stopwatch.getTime()));
         }
     }
 
     $scope.refresh = function(){
         stopwatch.stop();
         stime.innerHTML = StopWatch.toShowTime(stopwatch.getTime());
-        $scope.list = [];
+        stopwatch.list = [];
+    }
+
+    if (stopwatch.is_start){
+        stopwatch.tick = $scope.tick;
     }
 });

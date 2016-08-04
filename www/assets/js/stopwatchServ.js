@@ -2,16 +2,20 @@
 
 var stopwatch = {
     l_time: 0,
-    is_start: false
+    is_start: false,
+    list: [],
+    tick: function(){}
 }
 
 stopwatch.start = function(callback){
+    stopwatch.tick = callback;
     this.l_time = +new Date();
     this.is_start = true;
-    callback(0);
+
+    stopwatch.tick(0);
 
     this.loopID = setInterval(function(){
-        callback(+new Date() - this.l_time);
+        stopwatch.tick(+new Date() - this.l_time);
     }.bind(this), 50);
 }
 
