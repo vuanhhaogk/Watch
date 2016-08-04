@@ -22,6 +22,11 @@ var mainApp = angular.module('mainApp', ['ngRoute'])
         controller: "stopwatchCtrl"
     }).
 
+    when ('/countdown', {
+        templateUrl: 'countdown.html',
+        controller: "countdownCtrl"
+    }).
+
     otherwise({
         redirectTo: '/clock'
     })

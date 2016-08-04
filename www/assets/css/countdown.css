@@ -1,0 +1,73 @@
+#countdown {
+    width: 100%;
+    height: 100%;
+}
+
+#countdown .time {
+    display: block;
+    margin: 40px 0 40px 0;
+    background-color: #343434;
+    font-family: 'Quartz', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+#countdown .time input {
+    font-family: 'Quartz', sans-serif;
+    font-size: 36px;
+    display: inline-block;
+    width: 48px;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+#countdown .time input.mic{
+    width: 32px;
+}
+
+#countdown .tool {
+    margin: 0px auto 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    display: block;
+    overflow: hidden;
+}
+
+#countdown .tool label {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+#countdown .tool label:before {
+    content: '\f04b';
+}
+
+#countdown .tool label:hover {
+    background-color: #343434;
+}
+
+#startcountdown {
+    display: none;
+}
+
+#startcountdown:checked~.tool label:before {
+    content: '\f04d';
+}
+
+#startcountdown:checked~.time, #startcountdown:checked~.time input {
+    color: #0f0;
+}
+
+#startcountdown:checked~.tool label{
+    background-color: #323232;
+    color: #0f0;
+}

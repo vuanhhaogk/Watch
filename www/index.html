@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/calendar.css" type="text/css">
     <link rel="stylesheet" href="assets/css/alarm.css" type="text/css">
     <link rel="stylesheet" href="assets/css/stopwatch.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/countdown.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Watch</title>
@@ -73,7 +74,15 @@
     </script>
 
     <script type="text/ng-template" id="countdown.html">
-        Countdown
+        <div id="countdown">
+            <input type="checkbox" id="startcountdown" ng-model="is_start" ng-change="toggleStart()">
+            <div class="time">
+                <input type="text" class="hour" onclick="this.select()" ng-disabled="disabled">:<input type="text" class="min" onclick="this.select()" ng-disabled="disabled">:<input type="text" class="sec" onclick="this.select()" ng-disabled="disabled">.<input type="text" class="mic" onclick="this.select()" ng-disabled="disabled">
+            </div>
+            <div class="tool">
+                <label for="startcountdown" class="startstop fa"></label>
+            </div>
+        </div>
     </script>
 
     <script type="text/ng-template" id="setting.html">
@@ -87,10 +96,12 @@
     <script src="assets/js/calendarCtrl.js"></script>
     <script src="assets/js/alarmCtrl.js"></script>
     <script src="assets/js/stopwatchCtrl.js"></script>
+    <script src="assets/js/countdownCtrl.js"></script>
 
     <script src="assets/js/canvasclockServ.js"></script>
     <script src="assets/js/watchhandlerServ.js"></script>
     <script src="assets/js/alarmServ.js"></script>
     <script src="assets/js/stopwatchServ.js"></script>
+    <script src="assets/js/countdownServ.js"></script>
 </body>
 </html>
