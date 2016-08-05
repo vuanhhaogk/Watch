@@ -11,7 +11,7 @@ mainApp.controller('alarmCtrl', function($scope, Alarm, WatchHandler){
         if (isNaN(val) || val < 0 || val >= 24)
             val = 0;
 
-        alarm.hour = val;
+        alarm.setHour(val);
 
         this.value = WatchHandler.addPrefix(val);
     }
@@ -22,7 +22,7 @@ mainApp.controller('alarmCtrl', function($scope, Alarm, WatchHandler){
         if (isNaN(val) || val < 0 || val >= 60)
             val = 0;
 
-        alarm.min = val;
+        alarm.setMin(val);
 
         this.value = WatchHandler.addPrefix(val);
     }

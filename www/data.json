@@ -1,0 +1,12 @@
+{
+  "alarm": {
+    "enable": true,
+    "time": {
+      "hour": 12,
+      "min": 12
+    }
+  },
+  "setting": {
+    "lastdata": true
+  }
+}
