@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/alarm.css" type="text/css">
     <link rel="stylesheet" href="assets/css/stopwatch.css" type="text/css">
     <link rel="stylesheet" href="assets/css/countdown.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/setting.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Watch</title>
@@ -86,7 +87,16 @@
     </script>
 
     <script type="text/ng-template" id="setting.html">
-        Setting
+        <!--#setting>(section>input[type="checkbox" ng-model="check-$"]#st-check-$+label[for="st-check-$"]{Checkbox $})*10-->
+        <div id="setting">
+            <section><input type="checkbox" id="st-check-1"><label for="st-check-1">Using last data</label></section>
+            <section><input type="checkbox" id="st-check-2"><label for="st-check-2">Enable message for alarm and countdown</label></section>
+            <section><input type="checkbox" id="st-check-3"><label for="st-check-3">Enable hidden process (Window only)</label></section>
+            <section>
+                <label>Ring sound</label>
+                <input type="text" id="st-ring">
+            </section>
+        </div>
     </script>
 
     <script src="assets/js/menu.js"></script>
@@ -97,7 +107,9 @@
     <script src="assets/js/alarmCtrl.js"></script>
     <script src="assets/js/stopwatchCtrl.js"></script>
     <script src="assets/js/countdownCtrl.js"></script>
+    <script src="assets/js/settingCtrl.js"></script>
 
+    <script src="assets/js/dataServ.js"></script>
     <script src="assets/js/canvasclockServ.js"></script>
     <script src="assets/js/watchhandlerServ.js"></script>
     <script src="assets/js/alarmServ.js"></script>

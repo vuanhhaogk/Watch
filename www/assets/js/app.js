@@ -27,6 +27,11 @@ var mainApp = angular.module('mainApp', ['ngRoute'])
         controller: "countdownCtrl"
     }).
 
+    when ('/setting', {
+        templateUrl: 'setting.html',
+        controller: "settingCtrl"
+    }).
+
     otherwise({
         redirectTo: '/clock'
     })
