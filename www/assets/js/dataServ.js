@@ -25,6 +25,15 @@ Data.setAlarm = function(a){
     this.save();
 }
 
+Data.getStopWatch = function(){
+    return this._data.stopwatch;
+}
+
+Data.setStopWatch = function(s){
+    this._data.stopwatch = s;
+    this.save();
+}
+
 mainApp.service('Data', function(){
     getData = function(){
         return Data;

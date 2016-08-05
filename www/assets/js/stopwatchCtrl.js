@@ -12,19 +12,17 @@ mainApp.controller('stopwatchCtrl', function($scope, StopWatch){
 
     $scope.startTick = function(){
         if (!stopwatch.is_start){
-            stopwatch.start($scope.tick);
+            stopwatch.start();
         } else {
-            stopwatch.list.push(StopWatch.toShowTime(stopwatch.getTime()));
+            stopwatch.pushList(StopWatch.toShowTime(stopwatch.getTime()));
         }
     }
 
     $scope.refresh = function(){
+        stopwatch.list = [];
         stopwatch.stop();
         stime.innerHTML = StopWatch.toShowTime(stopwatch.getTime());
-        stopwatch.list = [];
     }
 
-    if (stopwatch.is_start){
-        stopwatch.tick = $scope.tick;
-    }
+    stopwatch.tick = $scope.tick;
 });

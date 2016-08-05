@@ -6,6 +6,10 @@
       "min": 12
     }
   },
+  "stopwatch": {
+    "time": 0,
+    "list": []
+  },
   "setting": {
     "lastdata": true
   }
