@@ -34,6 +34,15 @@ Data.setStopWatch = function(s){
     this.save();
 }
 
+Data.getCountdown = function(){
+    return this._data.countdown;
+}
+
+Data.setCountdown = function(c){
+    this._data.countdown = c;
+    this.save();
+}
+
 mainApp.service('Data', function(){
     getData = function(){
         return Data;

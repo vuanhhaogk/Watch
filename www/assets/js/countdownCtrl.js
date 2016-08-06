@@ -80,7 +80,7 @@ mainApp.controller('countdownCtrl', function($scope, Countdown, WatchHandler){
             countdown.d_time = ((d.hour * 60 + d.min) * 60 + d.sec) * 1000 + d.mic * 100;
             $scope.disabled = true;
 
-            countdown.start(tick);
+            countdown.start();
         } else {
             countdown.stop();
             $scope.disabled = false;
@@ -91,9 +91,7 @@ mainApp.controller('countdownCtrl', function($scope, Countdown, WatchHandler){
 
     $scope.disabled = false;
 
-    if (countdown.is_start){
-        countdown.tick = tick;
-    }
+    countdown.tick = tick;
 
     $scope.is_start = countdown.is_start;
 });

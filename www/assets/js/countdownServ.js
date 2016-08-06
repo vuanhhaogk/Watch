@@ -12,16 +12,28 @@ var countdown = {
 countdown.sound.src = 'assets/sound/alarm.wav';
 countdown.sound.loop = true;
 
+countdown.updateCountdown = function(){
+    if (Data.isLastData()){
+        Data.setCountdown({
+            time: this.l_time,
+            duration: this.d_time,
+            enable: this.is_start
+        });
+    }
+}
+
 countdown.getTime = function(){
     var c = this.d_time - (+new Date() - this.l_time);
     return !this.is_start ? this.d_time : c >= 0 ? c : 0;
 }
 
-countdown.start = function(callback){
+countdown.start = function(is_update){
     this.l_time = +new Date();
     this.is_start = true;
 
-    this.tick = callback;
+    if (is_update === undefined || is_update === true)
+        this.updateCountdown();
+
     this.tick(this.d_time);
 
     this.loop_id = setInterval(function(){
@@ -44,6 +56,7 @@ countdown.start = function(callback){
 
 countdown.stop = function(){
     this.is_start = false;
+    this.updateCountdown();
 }
 
 countdown.getHour = function(){
@@ -67,6 +80,16 @@ mainApp.service('Countdown', function(){
         return countdown;
     }
 });
+
+if (Data.isLastData()){
+    var c = Data.getCountdown();
+
+    if (c.enable){
+        countdown.start(false);
+        this.l_time = c.time;
+        this.d_time = c.duration;
+    }
+}
 
 return countdown;
 

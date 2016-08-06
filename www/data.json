@@ -2,13 +2,18 @@
   "alarm": {
     "enable": true,
     "time": {
-      "hour": 12,
-      "min": 12
+      "hour": 11,
+      "min": 40
     }
   },
   "stopwatch": {
     "time": 0,
     "list": []
+  },
+  "countdown": {
+    "time": 1470458308470,
+    "duration": 0,
+    "enable": false
   },
   "setting": {
     "lastdata": true
